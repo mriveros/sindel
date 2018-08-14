@@ -1,0 +1,26 @@
+.btn-default {
+    color: #fff;
+    border: 0;
+    background-color: #c0c2c7;
+    border-color: #c0c2c7;
+}
+
+.logo {
+	
+	background-image: url('../img/logo.png');
+  	background-repeat: no-repeat;
+  	height: 400px;
+  	background-position: center;  
+	overflow: hidden;
+	display:block; 
+	width: 100%;
+	opacity: 0.8;
+    -moz-opacity: 0.8;
+    -webkit-opacity: 0.8;
+    -o-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    -ms-opacity: 0.8;
+	
+}
+
+

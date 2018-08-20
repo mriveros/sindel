@@ -54,7 +54,7 @@
                         <div class="btn-group btn-group-sm">
                             <a href="show_medico.php?id_medic=<?php echo $value['id_medic'];?>" class="btn btn-info" title="Ver"><i class="icon-eye-open"></i></a>
                             <a href="edit_medico.php?id_medic=<?php echo $value['id_medic'];?>" class="btn btn-primary" title="Modificar"><i class="icon-pencil"></i></a>
-                            <a href="../control/delete_medico.php?id_medic=<?php echo $value['id_medic'];?>" class="btn btn-danger" title="Eliminar" onclick="if(confirm('&iquest;Está seguro que desea dar de baja al Médico?')) return true;  else return false;"><i class="icon-trash"></i></a>
+                            <a   class="btn btn-danger" title="Eliminar" onclick="delete_medico(<?php echo $value['id_medic'];?>);"><i class="icon-trash"></i></a>
                         </div>
                     </td>
                 </tr>   
@@ -73,10 +73,41 @@
 </div>
 
 <script type="text/javascript">
+    //href="../control/delete_medico.php?id_medic=<?php //echo $value['id_medic'];?>".
+
+
+
+    function delete_medico(cod_med){
+        swal({
+          title: "Está seguro que desea cambiar el estado del Médico?",
+          text: "El estado del Médico estará inactivo y no podrá seleccionarse en las consultas",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+                $.ajax({
+                    url: "../control/delete_medico.php",
+                    type : 'GET',
+                    data: { id_medic : cod_med },
+                    dataType: 'script'
+                    });
+            swal("Operación realizada exitosamente", {
+                    icon: "success",
+            });
+            window.location.href = 'index_medicos.php';
+            }else {
+                swal("Operación cancelada");
+            }
+           
+        });
+    }
+
     $(document).ready(function() {
         
     });
-       
+ 
 
 
 </script>

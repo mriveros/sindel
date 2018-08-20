@@ -1,6 +1,6 @@
 <?php 
 include_once('conexion.php');
- 
+include_once('script.php');
 ini_set('display_errors', 'on');
 
 $id_medic               =$_POST['id_medic'];
@@ -24,13 +24,13 @@ $localizar=pg_affected_rows($verifica);
 	if ($localizar > 0) {
 
 
-		print ("<script>alert('Medico Modificado');</script>");
+		print ("<script>swal('Medico Modificado');</script>");
 	    print('<meta http-equiv="refresh" content="0; URL=../vistas/index_medicos.php">');
 
 	}
 
 	else {
-		print ("<script>alert('Medico No Modificado');</script>");
+		print ("<script>swal('Medico No Modificado');</script>");
 	    print('<meta http-equiv="refresh" content="0; URL=../vistas/index_medicos.php>');
 }
 

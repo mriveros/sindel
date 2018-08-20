@@ -76,13 +76,13 @@
                         <div class="field-box">
                             <label>Fecha de Nacimiento:</label>
                             <div class="col-md-7">
-                                <input name="fn_medic" value="<?php echo strftime("%d-%m-%Y",strtotime($medico['fn_medic'])); ?>" id="fn_medic" class="form-control" type="text" placeholder="Click Aqui" required type="text">
+                                <input name="fn_medic" value="<?php echo strftime("%d/%m/%Y",strtotime($medico['fn_medic'])); ?>" id="fn_medic" class="form-control" type="text" placeholder="Click Aqui" required type="text">
 
                                         <script type="text/javascript">
                                           Calendar.setup(
                                             {
                                           inputField : "fn_medic",
-                                          ifFormat   : "%d-%m-%Y",
+                                          ifFormat   : "%m/%d/%Y",
                                           //button     : "Image1"
                                             }
                                           );

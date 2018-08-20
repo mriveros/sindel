@@ -21,6 +21,8 @@
     <script type="text/javascript" src="../vistas/js/datatable/jquery.dataTables.js"></script>
     <script type="text/JavaScript" language="javascript" src="../vistas/js/app.js"></script>
     <script type="text/JavaScript" language="javascript" src="../vistas/js/funcionesVarias.js"></script>
+    <script type="text/JavaScript" language="javascript" src="../vistas/js/sweetalert.min.js"></script>
+    
 
 </body>
 </html>

@@ -67,7 +67,7 @@
      <script type="text/javascript">
              $(document).ready(function() {
                  // Create a jqxMenu
-                 $("#jqxMenu").jqxMenu({ width: '300', mode: 'vertical'});
+                 //$("#jqxMenu").jqxMenu({ width: '300', mode: 'vertical'});
              });
         </script> 
          
@@ -81,6 +81,7 @@
                     <i class="icon-home"></i>
                     <span>Inicio</span>
                 </a>
+   
             </li> 
 <!--inicio pacientes-->
 <?php if ($_SESSION['tipo'] == 1 or $_SESSION['tipo'] == 2) {?>
@@ -205,6 +206,7 @@
     }
 ?>
             <!-- fin usuario -->
+   
               <li>
                 <a class="dropdown-toggle" href="#"><!--separacion-->
                     <i class="icon-book"></i><!--icon-->

@@ -1,6 +1,6 @@
 <?php 
 include_once('conexion.php');
- 
+include_once('script.php');
 ini_set('display_errors', 'on');
 
 $id_medic = $_GET['id_medic'];

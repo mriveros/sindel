@@ -1,2 +1,2 @@
-# voces 
-Sistema de citas y consultas para especialidades médicas, fonoaudiologia y odontologia
+# kitana 
+App for medical dates and fonologish control. kitana maybe will get interface for parents. 

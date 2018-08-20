@@ -36,7 +36,7 @@
     <header class="navbar navbar-inverse" role="banner">
         <div class="navbar-header">            
             <a class="navbar-brand" href="principal.php">
-                <img src="css/images/logo.gif" alt=""  width="35"/>  VOICES
+                <img src="css/images/logo.gif" alt=""  width="35"/>  KITANA
             </a>
         </div>
 

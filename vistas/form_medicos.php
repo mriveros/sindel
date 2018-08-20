@@ -39,17 +39,7 @@ $localizarPersona=pg_num_rows($verificaPersona);
                             </div>                            
                         </div>
 
-<!--                        <div class="field-box">
-                            <label>Especialidad:</label>
-                            <div class="col-md-7">
-                                <select name="espc_medic" class="form-control" id="espc_medic">
-                                    <option value="FONOAUDIOLOGIA">Fonoaudiólogo</option>
-                                    <option value="NEUROSICOLOGIA">Neurosicología</option>
-                                    <option value="PSICOPEDAGOLOGIA">Psicopedagología</option>
-                                    <option value="GENERAL">General</option>
-                                </select>
-                            </div>
-                        </div>-->
+
                          <div class="field-box">
                             <label>Especialidad:</label>
                                 <div class="col-md-7">

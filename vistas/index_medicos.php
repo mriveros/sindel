@@ -54,7 +54,7 @@
                         <div class="btn-group btn-group-sm">
                             <a href="show_medico.php?id_medic=<?php echo $value['id_medic'];?>" class="btn btn-info" title="Ver"><i class="icon-eye-open"></i></a>
                             <a href="edit_medico.php?id_medic=<?php echo $value['id_medic'];?>" class="btn btn-primary" title="Modificar"><i class="icon-pencil"></i></a>
-                            <a href="../control/delete_medico.php?id_medic=<?php echo $value['id_medic'];?>" class="btn btn-danger" title="Eliminar" onclick="if(confirm('&iquest;Esta seguro que desea Eliminar al paciente?')) return true;  else return false;"><i class="icon-trash"></i></a>
+                            <a href="../control/delete_medico.php?id_medic=<?php echo $value['id_medic'];?>" class="btn btn-danger" title="Eliminar" onclick="if(confirm('&iquest;Está seguro que desea dar de baja al Médico?')) return true;  else return false;"><i class="icon-trash"></i></a>
                         </div>
                     </td>
                 </tr>   

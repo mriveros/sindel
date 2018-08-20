@@ -54,17 +54,7 @@
                                <input value="<?php echo $medico['ci_medic']; ?>" name="ci_medic" id="ci_medic" class="form-control" required type="text" min="00000000" max="99999999" placeholder="12345678" autofocus>
                             </div>                            
                         </div>
-                        <!--<div class="field-box">
-                            <label>Especialidad:</label>
-                            <div class="col-md-7">                                
-                                <select name="espc_medic" class="form-control" id="espc_medic">
-                                    <option value="FONOAUDIOLOGIA"  <?php if ($medico['espc_medic'] == 'FONOAUDIOLOGIA') { echo "selected" ;   } ?> >Fonoaudiología</option>
-                                    <option value="NEUROSICOLOGIA" <?php if ($medico['espc_medic'] == 'NEUROSICOLOGIA') { echo "selected" ;   } ?>>Neurosicología</option>
-                                    <option value="PSICOPEDAGOLOGIA" <?php if ($medico['espc_medic'] == 'PSICOPEDAGOLOGIA') { echo "selected" ;   } ?> >Psicopedagología</option>
-                                    <option value="GENERAL" <?php if ($medico['espc_medic'] == 'GENERAL') { echo "selected" ;   } ?> >General</option>
-                                </select>                                
-                            </div>
-                        </div>-->
+                        
                        <div class="field-box">
                             <label>Especialidad:</label>
                                 <div class="col-md-7">

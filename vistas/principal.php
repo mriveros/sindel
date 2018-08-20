@@ -36,7 +36,7 @@
     <div class="content">
         <div id="pad-wrapper" class="form-page logo" >
             <div class="row header">
-                <h3>VOICES</h3></br>
+                <h3>kitana</h3></br>
                 <h4>- Sistema de Consultas -</h4>
             </div>
             <?php if (pg_num_rows($listaCitas) > 0) { ?>           

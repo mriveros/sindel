@@ -5,8 +5,8 @@ $fecha = $_POST['fecha'];
 include_once('../control/conexion.php');
 $buscarCitas="SELECT * FROM  cita_cnslt
  INNER JOIN motivo mot on (cita_cnslt.mot_cod = mot.mot_cod)    
- INNER JOIN pacnt_cnslt ON (cita_cnslt.ci_pacnt_cita = pacnt_cnslt.ci_pacnt) 
- WHERE fecha_cita =to_date('$fecha','dd-mm-yyyy')";
+ INNER JOIN pacnt_cnslt ON (cita_cnslt.pac_cod = pacnt_cnslt.id_pacnt) 
+ WHERE fecha_cita = to_date('$fecha','dd-mm-yyyy')";
 $conectando = new Conection();
 
 $listaCitas = pg_query($conectando->conectar(), $buscarCitas) or die('ERROR AL BUSCAR DATOS: ' . pg_last_error());
@@ -24,7 +24,7 @@ if ($resul) {
 				
 				$table.='<td>'. $cita["nom_pacnt"] .' '. $cita["apel_pacnt"] .'</td>';
 				$table.='<td>'. $cita["ci_pacnt"] .'</td>';
-				$table.='<td>'. $cita["mot_des"] .'</td>';
+				$table.='<td>'. $cita["mot_nom"] .'</td>';
 				$table.='<td>'. $cita["acmp_cita"] .'</td>';
 				$table.='<td><div class="btn-group btn-group-sm">
 							<a href="#" class="btn btn-info ver_cita" data-id="'.$cita['id_cita'].'"  data-title= "'.$cita['nom_pacnt'].' '.$cita['apel_pacnt'].'" title="Ver"><i class="icon-eye-open"></i></a>';

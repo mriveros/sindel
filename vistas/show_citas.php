@@ -9,7 +9,8 @@ session_start();
     include_once('sidebar.php');
     include_once('script.php');
     $id_cita = $_GET['id_cita'];
-	$buscarCitas="SELECT * FROM  cita_cnslt INNER JOIN pacnt_cnslt ON (cita_cnslt.ci_pacnt_cita = pacnt_cnslt.ci_pacnt) WHERE id_cita = '$id_cita'";
+	$buscarCitas="SELECT * FROM  cita_cnslt INNER JOIN pacnt_cnslt ON (cita_cnslt.pac_cod = pacnt_cnslt.id_pacnt)
+    INNER JOIN motivo mot  on mot.mot_cod = cita_cnslt.mot_cod  WHERE id_cita = $id_cita";
 	$conectando = new Conection();
 
 	$sql = pg_query($conectando->conectar(), $buscarCitas) or die('ERROR AL BUSCAR DATOS: ' . pg_last_error());
@@ -36,7 +37,7 @@ session_start();
                     <td><?php echo $cita['fecha_cita']; ?></td>
                     <td><?php echo $cita['nom_pacnt']; ?> <?php echo $cita['apel_pacnt']; ?></td>
                     <td><?php echo $cita['ci_pacnt']; ?></td>
-                    <td><?php echo $cita['motivo_cita']; ?></td>
+                    <td><?php echo $cita['mot_des']; ?></td>
                     <td><?php echo $cita['acmp_cita']; ?></td>
                     
                 </tr>

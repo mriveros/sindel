@@ -12,7 +12,8 @@
 
     $id_cita = $_GET["id_cita"];
 
-    $modificar="SELECT * FROM cita_cnslt INNER JOIN pacnt_cnslt ON cita_cnslt.ci_pacnt_cita =  pacnt_cnslt.ci_pacnt WHERE id_cita = '$id_cita'";
+    $modificar="SELECT * FROM  cita_cnslt INNER JOIN pacnt_cnslt ON (cita_cnslt.pac_cod = pacnt_cnslt.id_pacnt)
+    INNER JOIN motivo mot  on mot.mot_cod = cita_cnslt.mot_cod  WHERE id_cita  = '$id_cita'";
     $conectando = new Conection();
 
     $verifica = pg_query($conectando->conectar(), $modificar) or die('ERROR AL BUSCAR DATOS: ' . pg_last_error());

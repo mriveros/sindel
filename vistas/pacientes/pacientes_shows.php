@@ -31,7 +31,6 @@
             <tr>
                 <th>#</th>
                 <th>Nombre</th>
-               
                 <th>Cedula</th>
                 <th>Email</th>
                 <th>Acciones</th>

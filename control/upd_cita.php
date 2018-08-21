@@ -11,7 +11,7 @@ $acmp_cita		= $_POST['acmp_cita'];
 $observacion_cita = $_POST['observacion_cita'];
 $med_cod          = $_POST['med_cod'];
 
-$modificar="UPDATE cita_cnslt SET fecha_cita = '$fecha_cita', mot_cod = '$motivo_cita', acmp_cita = '$acmp_cita', observacion_cita = '$observacion_cita',id_medic=$med_cod WHERE id_cita = $id_cita";
+$modificar="UPDATE cita_cnslt SET fecha_cita =to_date('$fecha_cita','dd-mm-yyyy'), mot_cod = '$motivo_cita', acmp_cita = '$acmp_cita', observacion_cita = '$observacion_cita',id_medic=$med_cod WHERE id_cita = $id_cita";
 
 $conectando = new Conection();
 

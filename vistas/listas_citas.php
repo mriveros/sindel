@@ -1,13 +1,4 @@
-<?php  //modulo de session
-   /* 
-    $variable= $_GET["retorno"];
-    if ($variable=='true')
-    {
-        print ('<script> $("#modal_hitoria").modal(); </script>');
-        print ('<script> $("#verificar_cita").trigger("click"); </script>');
-        print ('<script> alert("gayer"); </script>');
-    }    
-    */ 
+<?php  
     
     session_start();
     $usuario = $_SESSION['usuario'];
@@ -20,7 +11,7 @@
     include_once('../control/conexion.php');
     include_once('sidebar.php');
     include_once('script.php');
-    $date = date('Y-m-d');
+    $date = (string)date('Y-m-d');
     echo $date;
     ini_set('display_errors', 'on');  //muestra los errores de php
     if  ($user_tipo==1 or $user_tipo==2){
@@ -30,7 +21,7 @@
     ON (motivo.mot_cod = cita_cnslt.mot_cod)
     INNER JOIN medic_cnslt 
     ON (cita_cnslt.id_medic = medic_cnslt.id_medic) 
-    WHERE fecha_cita='$date'  order by estatus asc";
+    WHERE fecha_cita = now()  order by estatus asc";
     }else 
     $buscarCitas="SELECT * FROM  cita_cnslt INNER JOIN pacnt_cnslt 
     ON (cita_cnslt.pac_cod = pacnt_cnslt.id_pacnt) 

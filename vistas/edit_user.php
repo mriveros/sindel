@@ -1,5 +1,5 @@
 <?php  //modulo de session
-    session_start();
+    session_start(); 
     $usuario = $_SESSION['usuario'];
     if(!isset($usuario)){
         header("Location: ../index.php");

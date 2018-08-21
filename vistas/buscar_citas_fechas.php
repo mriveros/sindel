@@ -5,8 +5,8 @@ $fecha = $_POST['fecha'];
 include_once('../control/conexion.php');
 $buscarCitas="SELECT * FROM  cita_cnslt
  INNER JOIN motivo mot on (cita_cnslt.mot_cod = mot.mot_cod)    
- INNER JOIN pacnt_cnslt ON (cita_cnslt.ci_pacnt_cita = pacnt_cnslt.ci_pacnt) 
- WHERE fecha_cita =to_date('$fecha','dd-mm-yyyy')";
+ INNER JOIN pacnt_cnslt ON (cita_cnslt.pac_cod = pacnt_cnslt.id_pacnt) 
+ WHERE fecha_cita ='$fecha'";
 $conectando = new Conection();
 
 $listaCitas = pg_query($conectando->conectar(), $buscarCitas) or die('ERROR AL BUSCAR DATOS: ' . pg_last_error());

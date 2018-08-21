@@ -18,7 +18,7 @@
             ON (motivo.mot_cod = cita_cnslt.mot_cod)
             INNER JOIN medic_cnslt 
             ON (cita_cnslt.id_medic = medic_cnslt.id_medic) 
-            WHERE fecha_cita='$fecha'  order by estatus asc";
+            WHERE fecha_cita=to_date('$fecha','YYYY-MM-DD')  order by estatus asc";
             }else if ($user_tipo=='3'){
             $buscarCitas="SELECT * FROM  cita_cnslt INNER JOIN pacnt_cnslt 
             ON (cita_cnslt.pac_cod = pacnt_cnslt.id_pacnt) 
@@ -26,7 +26,7 @@
             ON (motivo.mot_cod = cita_cnslt.mot_cod)
             INNER JOIN medic_cnslt 
             ON (cita_cnslt.id_medic = medic_cnslt.id_medic and medic_cnslt.ci_medic='$ci_medic') 
-            WHERE fecha_cita='$fecha' order by estatus asc";
+            WHERE fecha_cita=to_date('$fecha','YYYY/MM/DD') order by estatus asc";
             }
             $conectando = new Conection();
 

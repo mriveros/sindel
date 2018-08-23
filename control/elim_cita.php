@@ -1,5 +1,7 @@
 <?php 
 include_once('../control/conexion.php');
+include_once('../control/conexion.php');
+include_once('../vistas/script.php');
 ini_set('display_errors', 'on');
 $id_cita = $_GET["id_cita"];
 
@@ -10,12 +12,12 @@ $id_cita = $_GET["id_cita"];
     $localizar=pg_num_rows($verifica);
 
     if ($localizar = 1){
-      print ("<script>alert('La cita fue Eliminada');</script>");
-      print('<meta http-equiv="refresh" content="0; URL=../vistas/listas_citas.php">');
+      print ("<script>swal('La cita fue Eliminada');location.href = '../vistas/listas_citas.php' </script>");
+      
     }
 
     else{
-            print ("<script>alert('Not Found!');</script>");
+            print ("<script>swal('Not Found!');</script>");
             print('<meta http-equiv="refresh" content="0; URL=listas_citas.php">');
 
 }

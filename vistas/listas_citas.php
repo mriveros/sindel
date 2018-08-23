@@ -215,6 +215,5 @@ include_once('modal.php');
         $("#id_pacnt").val($(this).data('idpacnt'));
         $("#modal_hitoria_odonto").modal();
     });
-
-
+    
 </script>
